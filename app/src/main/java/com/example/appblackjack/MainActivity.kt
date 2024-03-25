@@ -140,25 +140,25 @@ fun BlackJackApp() {
                     }
                 }
                 
-            }
-            delay(100)
-            turnResult = if (playerPoints == 21){
-                "BlackJack "
-            }else{
-                ""
-            }
-            if (dealerPoints>21){
-                turnResult+="You Won, dealer execeed 21 points!"
-                wins++
-            }else if (dealerPoints == playerPoints){
-                turnResult+= "Its a Draw, both got $playerPoints points"
-                draws++
-            }else if(dealerPoints< playerPoints){
-                turnResult+= "You Won, $playerPoints x $dealerPoints "
-                wins++
-            }else{
-                turnResult+= "You Lost, $playerPoints x $dealerPoints"
-                losses++
+                delay(100)
+                turnResult = if (playerPoints == 21){
+                    "BlackJack "
+                }else{
+                    ""
+                }
+                if (dealerPoints>21){
+                    turnResult+="You Won, dealer execeed 21 points!"
+                    wins++
+                }else if (dealerPoints == playerPoints){
+                    turnResult+= "Its a Draw, both got $playerPoints points"
+                    draws++
+                }else if(dealerPoints< playerPoints){
+                    turnResult+= "You Won, $playerPoints x $dealerPoints "
+                    wins++
+                }else{
+                    turnResult+= "You Lost, $playerPoints x $dealerPoints"
+                    losses++
+                }
             }
         }
     }
